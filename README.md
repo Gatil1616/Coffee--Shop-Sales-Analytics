@@ -32,9 +32,9 @@ This project was built to demonstrate practical, job-ready **Data Analyst** skil
 
 | Main Sales Report | Calendar Tooltip | Hour & Day Tooltip |
 |:---:|:---:|:---:|
- <img width="1207" height="731" alt="Screenshot 2026-08-01 013217" src="https://github.com/user-attachments/assets/bce31797-c286-40fe-9033-81aa7def8017" />
- <img width="430" height="324" alt="Screenshot 2026-08-01 013256" src="https://github.com/user-attachments/assets/7107ee29-9c95-452d-b34b-7d076e4754aa" />
-  <img width="431" height="320" alt="Screenshot 2026-08-01 013315" src="https://github.com/user-attachments/assets/331f9b65-ed57-4ca9-bbdd-f5bb5f69307a" />
+ |<img width="1207" height="731" alt="Screenshot 2026-08-01 013217" src="https://github.com/user-attachments/assets/bce31797-c286-40fe-9033-81aa7def8017" />
+ |<img width="430" height="324" alt="Screenshot 2026-08-01 013256" src="https://github.com/user-attachments/assets/7107ee29-9c95-452d-b34b-7d076e4754aa" />
+  |<img width="431" height="320" alt="Screenshot 2026-08-01 013315" src="https://github.com/user-attachments/assets/331f9b65-ed57-4ca9-bbdd-f5bb5f69307a" />
  
 
 *(📁 Add your exported screenshots/GIF to an `assets/` folder in this repo and update the paths above — a live visual is what makes this README convert.)*
