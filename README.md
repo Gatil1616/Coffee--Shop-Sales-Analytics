@@ -35,9 +35,8 @@ This project was built to demonstrate practical, job-ready **Data Analyst** skil
  |<img width="1207" height="731" alt="Screenshot 2026-08-01 013217" src="https://github.com/user-attachments/assets/bce31797-c286-40fe-9033-81aa7def8017" />
  |<img width="430" height="324" alt="Screenshot 2026-08-01 013256" src="https://github.com/user-attachments/assets/7107ee29-9c95-452d-b34b-7d076e4754aa" />
   |<img width="431" height="320" alt="Screenshot 2026-08-01 013315" src="https://github.com/user-attachments/assets/331f9b65-ed57-4ca9-bbdd-f5bb5f69307a" />
- 
 
-*(📁 Add your exported screenshots/GIF to an `assets/` folder in this repo and update the paths above — a live visual is what makes this README convert.)*
+ 
 
 </div>
 
@@ -202,9 +201,9 @@ coffee-shop-sales-dashboard/
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/[your-linkedin])
-[![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:[your-email@example.com])
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/[your-github-username])
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gatil-dhawan-474097340/)
+[![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sandeepsks008@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gatil1616)
 
 *If this project caught your interest, I'd love to talk about how I can bring this kind of analysis to your team.*
 
