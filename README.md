@@ -30,13 +30,30 @@ This project was built to demonstrate practical, **Data Analyst** skills: data m
 <div align="center">
 
 
-| Main Sales Report | 
-|:---:|:---:|:---:|
- |<img width="1207" height="731" alt="Screenshot 2026-08-01 013217" src="https://github.com/user-attachments/assets/bce31797-c286-40fe-9033-81aa7def8017" />
- | Calendar Tooltip | 
- |<img width="430" height="324" alt="Screenshot 2026-08-01 013256" src="https://github.com/user-attachments/assets/7107ee29-9c95-452d-b34b-7d076e4754aa" />
- | Hour & Day Tooltip |
-  |<img width="431" height="320" alt="Screenshot 2026-08-01 013315" src="https://github.com/user-attachments/assets/331f9b65-ed57-4ca9-bbdd-f5bb5f69307a" />
+## 🖼️ Dashboard Preview
+
+<div align="center">
+
+### Main Sales Report
+<img src="https://github.com/user-attachments/assets/44730ed6-8888-4e87-a08d-2095fde5f13c" width="100%" />
+
+
+<br><br>
+
+<table>
+<tr>
+  <td align="center"><b>Calendar Tooltip</b></td>
+  <td align="center"><b>Hour & Day Tooltip</b></td>
+</tr>
+<tr>
+  <td><img  src="https://github.com/user-attachments/assets/f1476606-affa-481f-8f41-6b535e7ce44c" width ="430"/>
+</td>
+  <td><img src="https://github.com/user-attachments/assets/e98b21bc-eaca-444f-9b14-a899df229a46" width ="430"/>
+</td>
+</tr>
+</table>
+
+</div>
 
  
 
