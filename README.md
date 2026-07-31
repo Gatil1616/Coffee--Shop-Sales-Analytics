@@ -22,7 +22,6 @@
 
 This project was built to demonstrate practical, job-ready **Data Analyst** skills: data modeling, DAX measure design, interactive UX (slicers, tooltips, drill-through), and dashboard storytelling — not just default visuals dropped on a canvas.
 
-> 📌 **Recruiters / Hiring Managers:** This README walks through the data model, the business logic behind every measure, and the design decisions behind the report — exactly the kind of walkthrough I'd give in an interview.
 
 ---
 
@@ -30,11 +29,11 @@ This project was built to demonstrate practical, job-ready **Data Analyst** skil
 
 <div align="center">
 
-<!-- Replace these with real screenshots or a screen-recorded GIF of your report (Power BI Desktop → File → Export → GIF/Screenshot, or use ScreenToGif) -->
 
 | Main Sales Report | Calendar Tooltip | Hour & Day Tooltip |
 |:---:|:---:|:---:|
-| ![Main Page](assets/page1_preview.png) | ![Calendar Tooltip](assets/calendar_tooltip.png) | ![Hour Tooltip](assets/hour_tooltip.png) |
+| ![Main Page](<img width="1207" height="731" alt="Screenshot 2026-08-01 013217" src="https://github.com/user-attachments/assets/bce31797-c286-40fe-9033-81aa7def8017" />
+) | ![Calendar Tooltip](assets/calendar_tooltip.png) | ![Hour Tooltip](assets/hour_tooltip.png) |
 
 *(📁 Add your exported screenshots/GIF to an `assets/` folder in this repo and update the paths above — a live visual is what makes this README convert.)*
 
