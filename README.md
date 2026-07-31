@@ -167,7 +167,7 @@ RETURN
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/[your-github-username]/coffee-shop-sales-dashboard.git
+   git clone https://github.com/[gatil1616]/coffee-shop-sales-dashboard.git
    ```
 2. **Open `Coffee.pbix`** in [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/downloads) (free download).
 3. Use the **Month Year slicer** on Page 1 to filter the entire report.
