@@ -20,7 +20,7 @@
 
 **Coffee Shop Sales Dashboard** is an end-to-end Power BI analytics project built on real transactional data from a multi-location coffee shop business. It goes beyond "pretty charts" — it's designed to answer the questions a business stakeholder actually asks: *Where are we growing? Where are we losing ground? Which products and locations drive revenue? When are we busiest?*
 
-This project was built to demonstrate practical, job-ready **Data Analyst** skills: data modeling, DAX measure design, interactive UX (slicers, tooltips, drill-through), and dashboard storytelling — not just default visuals dropped on a canvas.
+This project was built to demonstrate practical, **Data Analyst** skills: data modeling, DAX measure design, interactive UX (slicers, tooltips, drill-through), and dashboard storytelling — not just default visuals dropped on a canvas.
 
 
 ---
@@ -30,10 +30,12 @@ This project was built to demonstrate practical, job-ready **Data Analyst** skil
 <div align="center">
 
 
-| Main Sales Report | Calendar Tooltip | Hour & Day Tooltip |
+| Main Sales Report | 
 |:---:|:---:|:---:|
  |<img width="1207" height="731" alt="Screenshot 2026-08-01 013217" src="https://github.com/user-attachments/assets/bce31797-c286-40fe-9033-81aa7def8017" />
+ | Calendar Tooltip | 
  |<img width="430" height="324" alt="Screenshot 2026-08-01 013256" src="https://github.com/user-attachments/assets/7107ee29-9c95-452d-b34b-7d076e4754aa" />
+ | Hour & Day Tooltip |
   |<img width="431" height="320" alt="Screenshot 2026-08-01 013315" src="https://github.com/user-attachments/assets/331f9b65-ed57-4ca9-bbdd-f5bb5f69307a" />
 
  
@@ -110,7 +112,7 @@ A dedicated **Date Table** (star-schema best practice) drives all time intellige
 
 ## 🧮 Key DAX Measures
 
-A sample of the core measures powering the report (naming reflects the actual `.pbix`):
+A sample of the core measures powering the report:
 
 ```dax
 Total Sales = SUMX(Transactions, Transactions[transaction_qty] * Transactions[unit_price])
@@ -130,7 +132,6 @@ RETURN
     DIVIDE(CurrentMonth - PreviousMonth, PreviousMonth)
 ```
 
-*(Adjust to match your exact DAX syntax before publishing — this reflects the measure names and logic found in the report.)*
 
 ---
 
@@ -154,12 +155,20 @@ RETURN
 
 ## 💡 Key Insights
 
-> Replace the bullets below with your own findings once you've explored the filtered views — specific, numbers-backed insights are what make a portfolio piece stand out to a hiring manager.
 
-- 🔥 *[e.g., "Store X location contributes the highest share of total revenue at __%"]*
-- 📉 *[e.g., "Sales dip on [day] compared to weekday average by __%"]*
-- ☕ *[e.g., "[Product category] is the top-selling category, driving __% of total quantity sold"]*
-- ⏰ *[e.g., "Peak trading hour is [X AM/PM], suggesting staffing should be adjusted accordingly"]*
+- ☕ **Coffee** generated the highest revenue (**$60.36K**), making it the strongest-performing product category.
+
+- 🥤 **Barista Espresso** was the best-selling product, contributing approximately **$20.42K** in sales.
+
+- 🏪 **Hell's Kitchen** recorded the highest sales (**$52.60K**), closely followed by **Astoria**.
+
+- 📅 **Weekdays accounted for 74.41%** of total sales, while weekends contributed **25.59%**, indicating significantly higher weekday demand.
+
+- ⏰ Sales activity peaked during the **morning and early afternoon (8 AM–10 AM)**, making these the busiest operating hours.
+
+- 📈 Total sales reached **$157K**, with **33,527 orders** and **48,233 units sold** during the selected month.
+
+- 📊 Daily sales remained consistently around the average daily sales of **$5.06K**, indicating stable business performance throughout the month.
 
 ---
 
@@ -167,7 +176,7 @@ RETURN
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/[gatil1616]/coffee-shop-sales-dashboard.git
+   git clone https://github.com/gatil1616/Coffee--Shop-Sales-Analytics.git
    ```
 2. **Open `Coffee.pbix`** in [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/downloads) (free download).
 3. Use the **Month Year slicer** on Page 1 to filter the entire report.
