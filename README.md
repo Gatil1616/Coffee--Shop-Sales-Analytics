@@ -250,7 +250,8 @@ The `.pbix` contains **3 report pages**, each with a specific analytical purpose
 ## 🗂️ Data Model
 
 <div align="center">
-<img src="Documentation/Data Model.png" width="85%" alt="Data Model Diagram"/>
+<img src="https://github.com/user-attachments/assets/91e3b783-2e31-4cfb-89c5-952ee83d1641" width="85%" alt="Data Model Diagram"/>
+  
 </div>
 
 <br/>
