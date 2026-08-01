@@ -71,6 +71,21 @@ This project was built to demonstrate practical **Data Analyst** skills: SQL dat
 
 ---
 
+# 🎥 Interactive Dashboard Demo
+
+<div align="center">
+
+### Watch the dashboard in action
+
+Demonstration of interactive filtering, dynamic KPIs, custom tooltips, and business insights.
+
+<img src="Dashboard Demo.gif" alt="Coffee Shop Sales Dashboard Demo" width="100%"/>
+
+</div>
+
+---
+---
+
 ## 📚 Table of Contents
 
 - [About This Project](#-about-this-project)
