@@ -359,7 +359,7 @@ This dashboard isn't just a reporting exercise — it's built to support real op
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/gatil1616/Coffee--Shop-Sales-Analytics.git
+   git clone https://github.com/gatil1616/Coffee-Shop-Sales-Analytics.git
    ```
 2. *(Optional)* Run **`Business_Queries.sql`** against your own MySQL instance to see the raw data cleaning and KPI-validation steps.
 3. **Open `Coffee.pbix`** in [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/downloads) (free download).
@@ -390,7 +390,6 @@ Coffee-Shop-Sales-Analytics/
 └── LICENSE
 ```
 
-> 📌 *Note: this is the target folder layout as the repo scales. Currently `Coffee.pbix` and `Business_Queries.sql` sit at the project root — see the actual file list on GitHub for the live structure.*
 
 ---
 
