@@ -1,15 +1,21 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=6F4E37&height=220&section=header&text=Coffee%20Shop%20Sales%20Dashboard&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=SQL%20%7C%20Power%20BI%20%7C%20DAX%20%7C%20Data%20Storytelling&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6F4E37&height=220&section=header&text=Coffee%20Shop%20Sales%20Dashboard&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=SQL%20%7C%20Power%20BI%20%7C%20DAX%20%7C%20Power%20Query%20%7C%20Excel&descAlignY=58&descSize=18" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&duration=3000&pause=800&color=6F4E37&center=true&vCenter=true&width=650&lines=Turning+raw+coffee+shop+transactions+into+insight;Built+with+MySQL+%2B+Power+BI+%2B+DAX;3+Pages+%7C+KPI+Cards+%7C+Trend+%26+Growth+Analysis;Designed+for+real+business+decision-making" alt="Typing SVG" />
 
 <br/>
 
+<img src="https://readme-typing-svg.demolab.com/?font=Georgia&size=26&duration=4000&pause=1200&color=6F4E37&center=true&vCenter=true&width=500&height=50&lines=Crafted+by+Gatil+Dhawan;Data+Analyst+%7C+BI+Developer" alt="Author Typing SVG" />
+
+<br/><br/>
+
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-6F4E37?style=for-the-badge&logo=microsoft&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=databricks&logoColor=white)
+![Power Query](https://img.shields.io/badge/Power%20Query-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
@@ -24,6 +30,20 @@
 The workflow mirrors a real analyst's process: **MySQL** is used first to clean and standardize the raw data and validate core KPIs with hand-written queries (including CTEs and window functions for month-over-month growth), and **Power BI + DAX** is used to turn that validated data into an interactive, decision-ready dashboard.
 
 This project was built to demonstrate practical **Data Analyst** skills: SQL data cleaning, KPI validation, data modeling, DAX measure design, interactive UX (slicers, tooltips, drill-through), and dashboard storytelling — not just default visuals dropped on a canvas.
+
+---
+
+## 🚀 Project Highlights
+
+<div align="center">
+
+| | | |
+|---|---|---|
+| ✔ Interactive Power BI Dashboard | ✔ Dynamic KPI Cards | ✔ SQL Data Analysis |
+| ✔ Power Query Data Transformation | ✔ Advanced DAX Measures | ✔ Interactive Tooltips |
+| ✔ Calendar Heatmap | ✔ Dynamic Filtering | ✔ Business Intelligence Reporting |
+
+</div>
 
 ---
 
@@ -54,6 +74,7 @@ This project was built to demonstrate practical **Data Analyst** skills: SQL dat
 ## 📚 Table of Contents
 
 - [About This Project](#-about-this-project)
+- [Project Highlights](#-project-highlights)
 - [Dashboard Preview](#️-dashboard-preview)
 - [Business Questions Answered](#-business-questions-answered)
 - [SQL Data Prep & KPI Validation](#-sql-data-prep--kpi-validation)
@@ -61,10 +82,13 @@ This project was built to demonstrate practical **Data Analyst** skills: SQL dat
 - [Data Model](#-data-model)
 - [Key DAX Measures](#-key-dax-measures)
 - [Tools & Tech Stack](#️-tools--tech-stack)
+- [Business Value](#-business-value)
 - [Key Insights](#-key-insights)
 - [How to Use This Report](#-how-to-use-this-report)
 - [Repository Structure](#-repository-structure)
+- [Future Enhancements](#-future-enhancements)
 - [Skills Demonstrated](#-skills-demonstrated)
+- [Author](#-author)
 - [Connect With Me](#-connect-with-me)
 
 ---
@@ -84,7 +108,10 @@ This project was built to demonstrate practical **Data Analyst** skills: SQL dat
 
 Before the data ever reached Power BI, it was cleaned and validated in **MySQL**. This step matters for interviews — it shows the numbers on the dashboard aren't just "whatever Power BI computed," they were independently verified with hand-written SQL.
 
-**1. Data cleaning — fixing data types on import**
+<details>
+<summary><b>1. Data cleaning — fixing data types on import</b></summary>
+
+<br/>
 
 Raw `transaction_date` and `transaction_time` came in as text, so they're converted to proper `DATE` / `TIME` types (a common real-world data-cleaning step), and the malformed `transaction_id` column header (a UTF-8 BOM artifact, `ï»¿transaction_id`) is renamed:
 
@@ -105,7 +132,12 @@ ALTER TABLE coffee_shop_sales
 CHANGE COLUMN `ï»¿transaction_id` transaction_id INT;
 ```
 
-**2. Total Sales for a given month**
+</details>
+
+<details>
+<summary><b>2. Total Sales for a given month</b></summary>
+
+<br/>
 
 ```sql
 SELECT ROUND(SUM(unit_price * transaction_qty)) AS total_sales
@@ -113,7 +145,12 @@ FROM coffee_shop_sales
 WHERE MONTH(transaction_date) = 5;   -- May
 ```
 
-**3. Total Orders for a given month**
+</details>
+
+<details>
+<summary><b>3. Total Orders for a given month</b></summary>
+
+<br/>
 
 ```sql
 SELECT COUNT(*) AS total_orders
@@ -121,7 +158,12 @@ FROM coffee_shop_sales
 WHERE MONTH(transaction_date) = 3;   -- March
 ```
 
-**4. Total Quantity Sold for a given month**
+</details>
+
+<details>
+<summary><b>4. Total Quantity Sold for a given month</b></summary>
+
+<br/>
 
 ```sql
 SELECT SUM(transaction_qty) AS total_qty
@@ -129,7 +171,14 @@ FROM coffee_shop_sales
 WHERE MONTH(transaction_date) = 5;   -- May
 ```
 
-**5. Month-over-Month % change in Orders** — using a CTE + window function (`LAG`) to compare each month to the one before it:
+</details>
+
+<details>
+<summary><b>5. Month-over-Month % change in Orders</b> (CTE + window function)</summary>
+
+<br/>
+
+Using a CTE + window function (`LAG`) to compare each month to the one before it:
 
 ```sql
 WITH mon_sales AS (
@@ -151,7 +200,14 @@ FROM mon_sales
 ORDER BY month;
 ```
 
-**6. Month-over-Month % change in Quantity Sold** — same `LAG` pattern applied to quantity:
+</details>
+
+<details>
+<summary><b>6. Month-over-Month % change in Quantity Sold</b></summary>
+
+<br/>
+
+Same `LAG` pattern applied to quantity:
 
 ```sql
 WITH mon_qty AS (
@@ -173,6 +229,8 @@ FROM mon_qty
 ORDER BY month;
 ```
 
+</details>
+
 📄 Full script: [`Business_Queries.sql`](Business_Queries.sql)
 
 ---
@@ -192,6 +250,18 @@ The `.pbix` contains **3 report pages**, each with a specific analytical purpose
 ## 🗂️ Data Model
 
 <div align="center">
+<img src="Documentation/Data Model.png" width="85%" alt="Data Model Diagram"/>
+</div>
+
+<br/>
+
+This report is built on a clean **Star Schema** — the industry-standard approach for BI modeling — rather than a single flat table. This design was chosen deliberately for three reasons:
+
+- **Fact Table (`Transactions`)** — holds the granular, transactional-level data (product, price, quantity, store, timestamp) and all quantitative measures used across the report.
+- **Date Dimension (`Date Table`)** — a dedicated, marked date table that powers accurate time intelligence (Month-over-Month growth, weekday/weekend splits, hour-of-day trends) instead of relying on the raw transaction date directly.
+- **Optimized Relationships** — single-direction, one-to-many relationships between the Date dimension and the fact table keep the model fast, predictable, and free of ambiguous filter paths.
+
+The result is **better analytical performance**, simpler DAX, and a model that scales cleanly if more dimensions (e.g., staff, promotions, suppliers) are added later.
 
 ```
 ┌─────────────────────┐        ┌──────────────────────┐
@@ -208,10 +278,6 @@ The `.pbix` contains **3 report pages**, each with a specific analytical purpose
                                     │ Daily Avg Sales (m)     │
                                     └──────────────────────┘
 ```
-
-</div>
-
-A dedicated **Date Table** (star-schema best practice) drives all time intelligence — enabling accurate month-over-month and weekday/weekend comparisons instead of relying on the raw transaction date directly.
 
 ---
 
@@ -247,6 +313,7 @@ RETURN
 ![Power BI](https://img.shields.io/badge/-Power%20BI%20Desktop-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/-DAX-6F4E37?style=flat-square)
 ![Power Query](https://img.shields.io/badge/-Power%20Query%20(M)-217346?style=flat-square)
+![Excel](https://img.shields.io/badge/-Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 ![Data Modeling](https://img.shields.io/badge/-Star%20Schema%20Modeling-blue?style=flat-square)
 
 </div>
@@ -255,7 +322,23 @@ RETURN
 - **Power BI Desktop** — report design, visuals, layout, theming
 - **Power Query (M)** — data cleaning and shaping before load
 - **DAX** — calculated measures, time intelligence, KPI logic
+- **Excel** — supplementary ad-hoc validation and quick-look analysis
 - **Data Modeling** — star schema with a dedicated Date dimension
+
+---
+
+## 📈 Business Value
+
+This dashboard isn't just a reporting exercise — it's built to support real operational and strategic decisions:
+
+| Business Need | How This Dashboard Helps |
+|---|---|
+| 📊 **Monitor KPIs** | Real-time visibility into Total Sales, Orders, Quantity, and Daily Average Sales at a glance |
+| 🏬 **Compare Store Performance** | Location-level breakdowns highlight top and bottom performers across the network |
+| ☕ **Analyze Product Demand** | Category and product-type breakdowns reveal what customers actually want |
+| 👥 **Improve Staffing** | Hour-of-day and weekday/weekend trends help align staff schedules with real demand |
+| 📦 **Optimize Inventory** | Product-level sales trends help avoid overstocking slow movers and understocking bestsellers |
+| 💰 **Increase Revenue** | Growth tracking (MoM %) makes it easy to spot momentum shifts early and act on them |
 
 ---
 
@@ -288,12 +371,35 @@ RETURN
 ## 📁 Repository Structure
 
 ```
-Coffee--Shop-Sales-Analytics/
+Coffee-Shop-Sales-Analytics/
 │
-├── Coffee.pbix                # Main Power BI report file
-├── Business_Queries.sql       # SQL data cleaning + KPI validation queries
-└── README.md                   # You are here
+├── Dashboard/
+│   └── Coffee.pbix                # Main Power BI report file
+│
+├── Dataset/
+│   └── coffee_shop_sales.csv      # Raw transactional data
+│
+├── SQL Scripts/
+│   └── Business_Queries.sql       # SQL data cleaning + KPI validation queries
+│
+├── Documentation/
+│   └── Data Model.png             # Data model / star schema diagram
+│
+├── README.md                       # You are here
+└── LICENSE
 ```
+
+> 📌 *Note: this is the target folder layout as the repo scales. Currently `Coffee.pbix` and `Business_Queries.sql` sit at the project root — see the actual file list on GitHub for the live structure.*
+
+---
+
+## 🚀 Future Enhancements
+
+- 🧩 **Customer Segmentation** — group customers/orders by behavior for targeted insights
+- 🔮 **Sales Forecasting** — trend-based forecasting for upcoming months
+- 🤖 **Predictive Analytics** — apply predictive models to anticipate demand shifts
+- 📦 **Inventory Optimization** — connect sales velocity to stock-level recommendations
+- ☁️ **Power BI Service Deployment** — publish to Power BI Service with scheduled refresh and row-level security
 
 ---
 
@@ -303,13 +409,25 @@ Coffee--Shop-Sales-Analytics/
 
 ---
 
-## 📬 Connect With Me
+## 👤 Author
 
 <div align="center">
 
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=28&duration=2500&pause=1000&color=6F4E37&center=true&vCenter=true&width=450&lines=Gatil+Dhawan" alt="Name Typing SVG" />
+
+**Data Analyst | BI Developer**
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gatil1616)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gatil-dhawan-474097340/)
 [![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sandeepsks008@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gatil1616)
+
+</div>
+
+---
+
+## 📬 Connect With Me
+
+<div align="center">
 
 *If this project caught your interest, I'd love to talk about how I can bring this kind of analysis to your team.*
 
