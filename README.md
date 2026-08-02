@@ -246,7 +246,7 @@ ORDER BY month;
 
 </details>
 
-📄 Full script: 📄 **Full script:** [Business Queries.sql](https://github.com/gatildhawan/coffee-sales-analysis/blob/main/Business%20Queries.sql)
+ 📄 **Full script:** [Business Queries.sql](https://github.com/gatil1616/coffee-sales-analysis/blob/main/Business%20Queries.sql)
 
 ---
 
