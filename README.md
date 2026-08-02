@@ -246,7 +246,7 @@ ORDER BY month;
 
 </details>
 
-📄 Full script: [`Business_Queries.sql`](Business_Queries.sql)
+📄 Full script: Busniess Queries.sql
 
 ---
 
@@ -302,21 +302,26 @@ The result is **better analytical performance**, simpler DAX, and a model that s
 A sample of the core measures powering the report:
 
 ```dax
-Total Sales = SUMX(Transactions, Transactions[transaction_qty] * Transactions[unit_price])
+Total Sales = SUM(Transactions[Sales])
 
 Total Orders = DISTINCTCOUNT(Transactions[transaction_id])
 
 Total Quantity Sold = SUM(Transactions[transaction_qty])
 
-Daily Avg Sales =
-DIVIDE([Total Sales], DISTINCTCOUNT('Date Table'[Date]))
+CM sales = 
+VAR selected_month = SELECTEDVALUE('Date Table'[Month])
+RETURN TOTALMTD(CALCULATE([Total Sales], 'Date Table'[Month] = selected_month), 'Date Table'[Date])
 
-MoM Growth (Sales) =
-VAR CurrentMonth = [Total Sales]
-VAR PreviousMonth =
-    CALCULATE([Total Sales], DATEADD('Date Table'[Date], -1, MONTH))
-RETURN
-    DIVIDE(CurrentMonth - PreviousMonth, PreviousMonth)
+PM sales = CALCULATE([CM sales], DATEADD('Date Table'[Date], -1, MONTH))
+
+Mom growth and diff = 
+VAR month_diff = [CM sales] - [PM sales]
+VAR mom = ([CM sales] - [PM sales]) / [PM sales]
+VAR _sign = IF(month_diff > 0, "+", "")
+VAR _sign_trend = IF(month_diff > 0, "▲", "▼")
+RETURN _sign_trend & " " & _sign & FORMAT(mom, "#0.0%" & " | " & _sign & FORMAT(month_diff/1000, "0.0K")) & " " & "vs LM"
+
+Daily Avg Sales = AVERAGEX(ALLSELECTED(Transactions[transaction_date]), [Total Sales])
 ```
 
 ---
